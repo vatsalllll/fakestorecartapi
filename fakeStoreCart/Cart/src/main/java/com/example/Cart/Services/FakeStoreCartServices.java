@@ -73,20 +73,7 @@ public class FakeStoreCartServices implements CartServices {
         return cartToAdd;
     }
 
-    @Override
-    public Cart updateCart(Cart cart) {
-        Cart cartToAdd = new Cart();
-        cartToAdd.setUserId(cart.getUserId());
-        cartToAdd.setProducts(cart.getProducts());
-        cartToAdd.setDate(cart.getDate());
-
-        restTemplate.put(
-                "https://fakestoreapi.com/carts/"+cart.getId(),
-                cartToAdd,
-                FakeProductDTO.class
-        );
-        return cartToAdd;
-    }
+  
 
     @Override
     public List<Cart> getCartByUser(Long userId) {
