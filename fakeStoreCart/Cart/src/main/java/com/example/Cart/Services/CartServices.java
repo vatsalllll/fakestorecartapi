@@ -13,8 +13,6 @@ public interface CartServices {
 
     Cart addCart(Cart cart);
 
-    Cart updateCart(Cart cart);
-
     List<Cart> getCartByUser(Long userId);
 
     List<Cart> getByDate(String start_Date, String End_Date);
