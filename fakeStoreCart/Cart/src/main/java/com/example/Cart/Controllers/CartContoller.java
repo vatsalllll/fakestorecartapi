@@ -34,11 +34,6 @@ public class CartContoller {
         return cartServices.addCart(cart);
     }
 
-    @PutMapping("/update")
-    public Cart updateCart(@RequestBody Cart cart){
-        return cartServices.addCart(cart);
-    }
-
     @GetMapping("/user/{userId}")
     public List<Cart> getByUser(@PathVariable("userId") Long id){
         return cartServices.getCartByUser(id);
